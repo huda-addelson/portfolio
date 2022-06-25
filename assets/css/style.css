@@ -127,7 +127,7 @@ img {
 }
 
 .nav {
-    height: var(--header-height);
+    height: calc(var(--header-height) + 1.25rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +139,7 @@ img {
     align-items: center;
 }
 
-/* .nav-list {
+.nav-list {
     display: flex;
     column-gap: 2rem;
 }
@@ -154,10 +154,10 @@ img {
 
 .nav-link:hover {
     color: var(--first-color);
-} */
+}
 
 /* Active Link */
-/* .nav-link:hover::before,
+.nav-link:hover::before,
 .nav-link::before {
     content: "";
     position: absolute;
@@ -177,7 +177,7 @@ img {
 
 .active {
     color: var(--first-color);
-} */
+}
 
 .nav-menu {
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -187,37 +187,6 @@ img {
     position: relative;
     display: flex;
     column-gap: 20px;
-}
-
-.nav-links .nav-link {
-    position: relative;
-    list-style: none;
-}
-
-.nav-links .nav-link a {
-    font-size: 1rem;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: 1px;
-    /* text-transform: uppercase; */
-    color: var(--border-color);
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
-}
-
-.nav-links .nav-link a::before {
-    content: attr(data-text);
-    position: absolute;
-    color: var(--clr);
-    width: 0;
-    overflow: hidden;
-    transition: .5s;
-    border-right: 3px solid var(--clr);
-    -webkit-text-stroke: 1px var(--clr);
-}
-
-.nav-links .nav-link a:hover::before {
-    width: 100%;
-    filter: drop-shadow(0 0 50px var(--clr))
 }
 
 .nav-close,
@@ -231,6 +200,45 @@ img {
     cursor: pointer;
 }
 
+.nav-close {
+    font-size: 1.25rem;
+}
+
+/*
+.nav-links .nav-link {
+    position: relative;
+    list-style: none;
+}
+
+.nav-links .nav-link a {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: var(--border-color);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links .nav-link a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: .5s;
+    border-right: 1px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+.nav-links .nav-link a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 50px var(--clr))
+}
+
+
+
+ */
+
 /* =============== HOME =============== */
 .home {
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -240,16 +248,17 @@ img {
     height: 100%;
 }
 
+/* 
 .background_shape {
     position: absolute;
-    width: 76%;
+    width: 100%;
     top: 0;
     left: 0;
     height: 100%;
     background-color: #f1faff;
     clip-path: polygon(100% 0%, 81% 86%, 0% 100%, 0% 0%);
     z-index: -1;
-}
+} */
 
 .home-content {
     grid-template-columns: 1fr 1fr;
@@ -313,10 +322,6 @@ img {
     opacity: .4;
 }
 
-/* .right-home {
-    display: flex;
-    justify-content: flex-end;
-} */
 
 .home-group {
     margin-top: 2rem;
@@ -503,7 +508,7 @@ img {
 .simple_shapes .six {
     bottom: 33%;
     left: 3%;
-    transform: rotate(250deg)
+    transform: rotate(250deg);
 }
 
 .simple_shapes .six .cls-1 {
@@ -513,7 +518,7 @@ img {
 
 .simple_shapes .six .svg {
     width: 30px;
-    height: 30px;
+    height: 70px;
     stroke: rgba(51, 51, 51, .3)
 }
 
@@ -1046,65 +1051,131 @@ img {
     background-color: var(--first-color);
 }
 
-@media (max-width:1200px) {
+@media screen and (max-width: 1208px) {
     .container {
         margin: 0 1.5rem;
     }
+}
 
-    .simple_shapes .six,
-    .simple_shapes .eighteen,
-    .simple_shapes .five,
-    .simple_shapes .fourteen {
+@media screen and (max-width: 1024px) {
+    .simple_shapes .six {
+        bottom: 20%;
+        left: 30%;
+        transform: rotate(250deg);
+    }
+
+    .simple_shapes .three .svg {
+        width: 90px;
+        height: 90px
+    }
+
+    .simple_shapes .eight {
         display: none;
     }
 }
 
-@media (max-width:768px) {
-    .section {
-        padding: 4.5rem 0 2rem;
+@media screen and (max-width: 821px) {
+    .simple_shapes .two .svg {
+        width: 60px;
+        height: 60px;
     }
 
-    .simple_shapes .three,
-    .simple_shapes .two {
-        width: 50px;
-        height: 50px;
+    .simple_shapes .sixteen,
+    .simple_shapes .thirteen,
+    .simple_shapes .six,
+    .simple_shapes .nineteen {
+        display: none;
     }
 
-    .simple_shapes .two {
-        bottom: 25%;
+    .simple_shapes .three {
+        top: 13%;
+        right: 30%;
     }
 
-    .simple_shapes .one {
-        top: 20%;
+    .left-home .title {
+        font-size: 2.35rem;
     }
 
     .left-home .sub-title {
-        font-size: 1.15rem;
+        font-size: var(--h2-font);
     }
 
     .left-home .desc {
         font-size: var(--small-font);
-        line-height: 1rem;
+        line-height: 1.25rem;
+        width: 335px;
     }
 
-    /* 
-    .nav {
-        height: 5rem;
+
+}
+
+@media screen and (max-width: 650px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
     }
+
+    .right-home {
+        display: none;
+    }
+
+    .home-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
+    .home-sosial .sosial-follow {
+        padding-right: 3rem;
+    }
+
+    .home-sosial .sosial-follow::after {
+        width: 20px;
+    }
+
 
     .nav-menu {
-        display: flex;
         position: fixed;
         background-color: var(--container-color);
         top: 0;
-        right: 0;
+        right: -100%;
         width: 80%;
         height: 100%;
         padding: 4rem 0 0 3rem;
+        box-shadow: -2px 0 4px hsla(250, 24%, 15%, .1);
+        transition: .4s;
     }
 
-    .nav-links {
+    .show-menu {
+        right: 0;
+    }
+
+    .nav-list {
         flex-direction: column;
-        row-gap: 1.5rem;
-    } */
+        row-gap: 2rem;
+    }
+
+
+    .nav-close {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        cursor: pointer;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        flex-direction: column;
+    }
 }
+
+@media screen and (max-width: 350px) {}
