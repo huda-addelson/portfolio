@@ -52,6 +52,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 button,
 input,
@@ -1055,6 +1059,11 @@ img {
     .container {
         margin: 0 1.5rem;
     }
+
+    .simple_shapes .six {
+        bottom: 22%;
+        left: 26%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1072,6 +1081,12 @@ img {
     .simple_shapes .eight {
         display: none;
     }
+
+    .simple_shapes .two {
+        bottom: 10%;
+    }
+
+
 }
 
 @media screen and (max-width: 821px) {
@@ -1175,6 +1190,50 @@ img {
         justify-content: center;
         min-height: 100vh;
         flex-direction: column;
+    }
+
+    .simple_shapes .three {
+        top: 20%;
+        right: 5%
+    }
+
+    .simple_shapes .eighteen {
+        right: 45%;
+    }
+
+    .simple_shapes .twelve {
+        bottom: 40%;
+        left: 50%;
+    }
+
+    .simple_shapes .twenty {
+        bottom: 50%;
+        right: 15%;
+    }
+
+    .simple_shapes .eighteen {
+        right: 84%;
+        bottom: 57%;
+    }
+
+    .simple_shapes .four {
+        top: 75%;
+        left: 45%;
+    }
+
+    .simple_shapes .nine {
+        top: 80%;
+        left: 76%;
+        transform: rotate(70deg);
+    }
+
+    .simple_shapes .two {
+        bottom: 10%;
+        left: 10%;
+    }
+
+    .simple_shapes .five {
+        top: 70%;
     }
 }
 
