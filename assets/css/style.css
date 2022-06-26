@@ -131,13 +131,23 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--container-color);
     width: 100%;
     z-index: var(--z-fixed);
+    transition: .4s;
+    /* line-height: 120px;
+    height: 120px; */
+}
+
+.header.scrolled {
+    background-color: var(--bg-color-transparant);
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    /* line-height: 80px;
+    height: 80px; */
 }
 
 .nav {
-    height: calc(var(--header-height) + 1.25rem);
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1094,10 +1104,6 @@ img {
     overflow-x: auto;
 }
 
-.filter-project::-webkit-scrollbar {
-    /* height: 10px;
-    width: 100%; */
-}
 
 .filter-item {
     display: flex;

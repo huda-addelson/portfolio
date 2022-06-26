@@ -20,7 +20,15 @@
 //         })
 //     }
 // })
+/* =============== HEADER STICKY =============== */
+const header = document.getElementById("header");
 
+function stickyNavbar() {
+    header.classList.toggle("scrolled", window.pageYOffset > 0);
+}
+
+stickyNavbar();
+window.addEventListener("scroll", stickyNavbar);
 
 /* =============== TAMPIL-MENU =============== */
 const navMenu = document.getElementById("nav-menu"),
