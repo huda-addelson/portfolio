@@ -810,19 +810,6 @@ img {
     }
 }
 
-.anim_translate {
-    animation: animTranslate 5s linear 0s infinite alternate
-}
-
-@keyframes animTranslate {
-    0% {
-        transform: rotate(42deg) translateX(-5px)
-    }
-
-    100% {
-        transform: rotate(42deg) translateX(5px)
-    }
-}
 
 .anim_moveTop {
     animation: animMoveTop 5s linear 0s infinite alternate
@@ -849,20 +836,6 @@ img {
 
     100% {
         transform: translateX(30px)
-    }
-}
-
-.anim_extra {
-    animation: animExtra 5s linear 0s infinite alternate
-}
-
-@keyframes animExtra {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    100% {
-        transform: rotate(180deg)
     }
 }
 
@@ -911,7 +884,7 @@ img {
 
 /* =============== ABOUT =============== */
 .about-content {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2.5rem;
     align-items: center;
@@ -1207,6 +1180,10 @@ img {
 }
 
 @media screen and (max-width: 650px) {
+    .section {
+        padding: 4rem 0 2rem;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         row-gap: 3rem;
