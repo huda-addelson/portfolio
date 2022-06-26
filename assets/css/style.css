@@ -120,6 +120,12 @@ img {
     padding: 7rem 0 2rem;
 }
 
+.section-title {
+    color: var(--first-color);
+    text-align: center;
+    font-size: var(--h1-font);
+}
+
 /* =============== HEADER & NAV =============== */
 .header {
     position: fixed;
@@ -927,12 +933,12 @@ img {
 }
 
 .about-title {
-    text-align: center;
+    text-align: left;
     color: var(--text-color);
 }
 
 .about-personal {
-    text-align: center;
+    text-align: left;
     color: var(--first-color);
     margin-bottom: 2.875rem;
 }
@@ -1055,6 +1061,49 @@ img {
     background-color: var(--first-color);
 }
 
+/* =============== PROJECT =============== */
+.project-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-project {
+    /* display: flex; */
+    margin-top: 2rem;
+    display: inline-flex;
+    column-gap: 1.5rem;
+    padding: 0 1rem;
+    opacity: .7;
+    padding-bottom: .475rem;
+    border-bottom: 2px solid var(--border-color);
+    overflow-x: auto;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    column-gap: .475rem;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: var(--font-medium);
+    transition: .4s;
+    min-width: 100px;
+    text-align: center;
+}
+
+.filter-item:hover,
+.filter-item:hover .project-count {
+    color: black;
+    border-color: black;
+}
+
+.project-count {
+    padding: 0 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    transition: .4s;
+}
+
 @media screen and (max-width: 1208px) {
     .container {
         margin: 0 1.5rem;
@@ -1121,7 +1170,14 @@ img {
         width: 335px;
     }
 
+    .about-content {
+        column-gap: 1rem;
+    }
 
+    .skilbar {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 650px) {

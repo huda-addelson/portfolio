@@ -1,10 +1,10 @@
 
-let homeSwiper = new Swiper(".home-swiper", {
-    spaceBetween: 16,
-    centeredSlides: true,
-    slidesPerview: 'auto',
-    loop: 'true',
-});
+// let homeSwiper = new Swiper(".home-swiper", {
+//     spaceBetween: 16,
+//     centeredSlides: true,
+//     slidesPerview: 'auto',
+//     loop: 'true',
+// });
 
 // Skils Bar
 // $(window).scroll(function(){
